@@ -604,6 +604,67 @@
   position: relative;
 }
 
+.contact_mainbox {
+  height: 92%;
+}
+
+.contact_card-wrapper {
+  background-color: #441a1a;
+  height: 45rem;
+  color: white;
+}
+
+.contact_card {
+  padding: 1rem 2rem;
+  border: solid 1px white;
+  width: 25rem;
+  outline: solid 1px;
+  outline-offset: 3rem;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+.contact_card-info {
+  margin-bottom: 3rem;
+}
+
+.contact_card-info .phonenumber {
+  display: inline-block;
+}
+
+.contact_card-info .mail {
+  display: block;
+}
+
+.contact_card:nth-of-type(1) {
+  text-align: right;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-right: 10rem;
+}
+
+.contact_card:nth-of-type(1) .contact_card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact_card:nth-of-type(2) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 6rem;
+}
+
+.contact_card-image {
+  width: 8rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+
 *,
 *::after,
 *::before {
