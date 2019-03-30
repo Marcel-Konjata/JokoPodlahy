@@ -1,0 +1,92 @@
+.showcase {
+    height: 100vh;
+    background-color: black;
+    position: relative;
+
+    .cards_wrapper {
+        width: 100%;
+
+    }
+
+    &_presentation {
+        margin-right: -4%;
+        position: relative;
+        z-index: 2;
+        margin-left: 5%;
+    }
+
+    &_cards {
+        width: 25rem;
+        height: 18rem;
+        overflow: hidden;
+        background: white;
+
+        &:nth-of-type(2) {
+            transform: scale(1.15);
+        }
+
+
+        &-card {
+            width: 95%;
+            display: block;
+            padding-top: 1rem;
+            margin: 0 auto;
+        }
+
+        &-caption {
+            text-align: center;
+            padding-top: 1rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    .input_container {
+        margin-top: 2rem;
+    }
+
+    .wrapper {
+        height: 90%;
+
+
+    }
+
+    &_content {
+        color: white;
+
+        font-size: 2rem;
+        width: 35%;
+        padding: 6rem 8rem;
+        border: solid white 2px;
+        border-radius: 40px;
+
+        &-heading {
+            margin-bottom: 6rem;
+        }
+
+        &-paragraph {
+            margin-bottom: 3rem;
+
+            &:last-of-type {
+                margin-bottom: 7rem;
+            }
+        }
+    }
+
+    &_animate-btn{
+        margin:2rem 6rem;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+        &:active{
+            transform: scale(1);
+        }
+    }
+    .input_container {justify-content: center;}
+
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+}

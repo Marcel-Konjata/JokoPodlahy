@@ -1,0 +1,68 @@
+.navigation_horizontal{
+    max-width: 80rem;
+    height: 6rem;
+   padding-top: 2rem;
+    &-list{
+        justify-content: flex-start;
+        padding-left: 6rem;
+        
+    }
+    &-link{
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        padding: 2rem;
+        display: inline-block;
+    }
+
+}
+.navigation_vertical{
+    
+    
+    /*values here are in vh because after rotating element we are reversing directions widht is heigth and height will 
+    be projected as width therefore VH unit is needed here 
+    */
+    background: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 2.8rem;
+    transform-origin: top left;
+    transform: rotate(90deg) translatey(-73vh) translateX(23%);
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+  z-index: 10;
+    float: right;
+    
+   
+    width: 75vh;
+    &-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+     
+    }
+    &-link{
+        display: inline-block;
+        padding: .5rem 1rem;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+
+.main-header {
+    display: flex;
+
+    .helper {
+        flex-basis: 45%;
+        width: 45%;
+    }
+
+    nav {
+        flex-basis: 55%;
+        width: 55%;
+    }
+}

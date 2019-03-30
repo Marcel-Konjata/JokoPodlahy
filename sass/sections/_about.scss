@@ -1,0 +1,77 @@
+.about{
+   height: 100vh;
+   min-height: 65rem;
+   overflow: hidden;
+   position: relative;
+   
+   
+    &_image{
+        background: black;
+        flex-basis: 45%;
+        overflow: hidden;
+       background: url('../../images/background/aboutimage.jpg') no-repeat;
+       background-position: 8% 50%;
+       min-height: 495px;
+      
+    }
+    &_content{
+        flex-basis: 55%;
+        background-color:black;
+        color:white;
+        height: 100vh;
+        min-height: 495px;
+        position: relative;
+        border-left: 1px solid white;
+    
+        
+        &-article{
+            font-size: 1.8rem;
+           max-width: 55rem;
+           line-height: 1.5;
+           padding: 2rem 4rem;
+            min-height: 35rem;
+            border: solid white 1px;
+           position: relative;
+            p:not(:last-of-type){
+                margin-bottom: 1rem;
+            }
+            p:last-of-type{
+                margin-bottom: 2rem;
+            }
+            h2{
+                margin-top: 2rem;
+                margin-bottom: 1.5rem;
+
+            }
+                    &--complementary{
+                        max-width: 380px;
+                        height:35rem;
+                        
+                        
+                        background: linear-gradient(35deg, black 20%, white 20%, white);
+                        color: black;
+                        padding: 4rem 5rem;
+                        position: absolute;
+                        top: 55%;
+                        left: -36rem;
+
+                        h2{
+                            margin-top: 2rem;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            margin-bottom: 3rem;
+                        }
+                        p{
+                            margin: 2rem 0;
+                            font-size: 1.5rem;
+                        }
+                  }
+        }
+    }
+}
+.articles{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}

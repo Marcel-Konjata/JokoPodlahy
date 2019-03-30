@@ -1,0 +1,19 @@
+.btn{
+    padding: 1rem 3rem;
+    display: inline-block;
+    &_hero{
+        border: 1px solid white;
+        color: white;
+        transition: background-color, color 0.2s 0.2s, 0.2s 0.2s;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+    &-galerie{
+        background: white;
+        border-radius: 8px;
+        color: black
+        
+    }
+}
