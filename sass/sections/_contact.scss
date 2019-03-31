@@ -7,16 +7,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    min-height: 80rem;
 
+    // min-height: 700px;
     &_mainbox {
         height: 92%;
         // background-color: #fff;
     }
 
     &_card-wrapper {
-        background-color: rgb(68, 26, 26);
+
         height: 45rem;
         color: white;
+        margin-bottom: 2.5rem;
 
     }
 
@@ -35,6 +38,7 @@
             .phonenumber {
                 display: inline-block;
             }
+
             .mail {
                 display: block;
             }
@@ -44,7 +48,8 @@
             text-align: right;
             align-self: flex-start;
             margin-right: 10rem;
-            .contact_card-info{
+
+            .contact_card-info {
                 display: flex;
                 justify-content: space-between;
             }
@@ -64,4 +69,104 @@
         }
     }
 
+    .popup {
+        background: white;
+        width: 80rem;
+        height: 60rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+        visibility: hidden;
+        opacity: 0;
+
+    }
+        /// POP-UP FORM ////////////////////////////
+    .form {
+        width: 65%;
+        padding: 8rem;
+
+        &-section{
+            position: relative;
+            margin: 3rem 0;
+        }
+
+        &_heading {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 4rem;
+        }
+
+        input {
+            position: relative;
+            display: block;
+            padding: 1rem 2rem;
+            width: 100%;
+            font-size: 1.6rem;
+            font-style: italic;
+
+            &:focus {
+                outline: none;
+            }
+
+            &[type="email"] {
+                border: black 1px solid;
+            }
+
+            &[type="email"]:focus:invalid {
+                border-bottom: red solid 2px;
+            }
+
+            &[type="email"]:focus:valid {
+                border-bottom: green solid 2px;
+            } 
+
+            &[type="email"]:focus + label[for="email"]{
+                top: -3rem;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        label[for="email"]{
+            display: block;
+            position: absolute;
+            font-style: italic;
+            padding-left: 1rem;
+            top:0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .2s ease-in, top .2s ease-in;
+        }
+
+        &_message{
+            width: 100%;
+            height: 20rem;
+            font-family: sans-serif;
+            font-style: italic;
+            padding: 1rem;
+            resize: none;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .form_image {
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .form_container {
+        height: 100%;
+    }
 }

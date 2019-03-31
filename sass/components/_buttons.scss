@@ -16,4 +16,40 @@
         color: black
         
     }
+    &-contact{
+        color: white;
+        border: white solid 2px;
+        background: black;
+        border-radius: 6px;
+
+        &:hover{
+            color: black;
+            background: white;
+            
+        }
+    }
+
+    &-cancel{
+        color: white;
+        background: black;
+        font-style: italic;
+        text-transform: uppercase;
+        &:hover{
+            
+            background: grey;
+        }
+    }
+    &-submit{
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: italic;
+        text-transform: uppercase;
+        background-color: #4F1F12;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(79, 31, 18, 0.678);
+        }
+    }
 }
