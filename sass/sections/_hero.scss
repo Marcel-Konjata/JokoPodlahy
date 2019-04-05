@@ -1,21 +1,15 @@
 .hero {
 
     height: 100vh;
-    
-    background-image: url('../../images/hero-img/heroimg_large.jpg');
+    min-height: 40rem;
+    overflow: hidden;
+    background-image:linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(100, 40, 23, 0.396), rgba(129, 3, 3, 0.239)),
+     url('../../images/hero-img/heroimg_large.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    &::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background:linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(100, 40, 23, 0.396), rgba(129, 3, 3, 0.239));
-    }
+  
     .wrapper{height: 100%;}
 
     &_title {
@@ -25,19 +19,38 @@
         bottom: 50%;
         left: 10%;
         line-height: 1.5;
+        text-shadow: 2px 3px rgba(0, 0, 0, 0.739);
         transform: translateY(50%);
-
+        @include setMediaQuery(max,760px){
+           left:50%;
+           transform: translate(-50%,80%);
+           width: 100%;
+           
+        
+        }
 
         &--primary {
             font-family: 'Montserrat';
-            font-size: 4.2rem;
+            font-size: 42px;
             font-weight: 400;
+            @include setMediaQuery(max,760px){
+                font-size: 30px;
+            }
+
+              //this will change dont forget add animate class
+            animation: fadeFromRight .5s ease-in backwards;
         }
 
         &--secondary {
             display: block;
-            font-size: 2.6rem;
+            font-size: 26px;
+            @include setMediaQuery(max,760px){
+                font-size: 18px;
+            }
 
+            //this will change dont forget add animate class
+            animation: fadeFromLeft .5s ease-in backwards ;
+            animation-delay: .5s;
         }
     }
 
@@ -54,9 +67,13 @@
     &_navigation {
 
         font-weight: bold;
-        font-size: 1.8rem;
+        font-size: 18px;
         font-family: 'Montserrat';
 
+        @include setMediaQuery(max,760px){
+            display: none;
+        }
+        
         &-list {
             display: flex;
         }
@@ -85,4 +102,10 @@
 
 .btn_hero {
     margin-top: 5rem;
+
+      //this will change dont forget add animate class
+      animation: fadeIn .2s backwards;
+      animation-delay: 1.4s;
+      text-shadow: none;
+      font-size: 16px;
 }

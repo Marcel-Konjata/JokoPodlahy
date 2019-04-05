@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=mobile.css.map */
+/*-----IMPORTANT NOTE------ due to using mixins of setting media query
+the explicit way is set, this will keep code more readable than mobile-laptop-bigscreen
+first argument is set to determine breakpoint min or max
+second argument is width value
+*/
+@media screen and (min-width: 350px) {
+  body {
+    background: blue;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

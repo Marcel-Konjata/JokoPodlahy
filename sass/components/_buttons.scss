@@ -4,10 +4,14 @@
     &_hero{
         border: 1px solid white;
         color: white;
-        transition: background-color, color 0.2s 0.2s, 0.2s 0.2s;
+        transition: background-color  0.8s 0.2s, color 0.2s 0.2s, transform .2s;
         &:hover{
             background-color: white;
             color: black;
+            transform: scale(1.2);
+        }
+        &:active{
+            transform: scale(1.1);
         }
     }
     &-galerie{

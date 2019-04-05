@@ -8,6 +8,7 @@
     background-size: cover;
     position: relative;
     min-height: 80rem;
+    overflow: hidden;
 
     // min-height: 700px;
     &_mainbox {
@@ -49,6 +50,11 @@
             align-self: flex-start;
             margin-right: 10rem;
 
+            //animation property will be added here
+            animation: fadeInFromTop .8s backwards;
+            animation-delay: .3s;
+            ///////////////////////////////////////////
+
             .contact_card-info {
                 display: flex;
                 justify-content: space-between;
@@ -58,6 +64,12 @@
         &:nth-of-type(2) {
             align-self: flex-end;
             margin-bottom: 6rem;
+
+            //animation property will be added here
+            animation: fadeInFromBot .8s backwards;
+            animation-delay: .3s;
+            ///////////////////////////////////////////
+
         }
 
         &-image {
@@ -73,21 +85,36 @@
         background: white;
         width: 80rem;
         height: 60rem;
-        position: fixed;
+        
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 50;
         visibility: hidden;
         opacity: 0;
+        transition: opacity .5s;
+
+        @include setMediaQuery(max,650px){
+            width: 100%;
+        }
+       
+        
+        &:target{
+            opacity: 1;
+            visibility: visible;
+        }
+
 
     }
-        /// POP-UP FORM ////////////////////////////
+
+    /// POP-UP FORM ////////////////////////////
     .form {
         width: 65%;
         padding: 8rem;
+        
 
-        &-section{
+        &-section {
             position: relative;
             margin: 3rem 0;
         }
@@ -97,7 +124,9 @@
             font-weight: 600;
             margin-bottom: 4rem;
         }
-
+        textarea{
+            font-size: 1.6rem;
+        }
         input {
             position: relative;
             display: block;
@@ -120,28 +149,28 @@
 
             &[type="email"]:focus:valid {
                 border-bottom: green solid 2px;
-            } 
+            }
 
-            &[type="email"]:focus + label[for="email"]{
+            &[type="email"]:focus+label[for="email"] {
                 top: -3rem;
                 opacity: 1;
                 visibility: visible;
             }
         }
 
-        label[for="email"]{
+        label[for="email"] {
             display: block;
             position: absolute;
             font-style: italic;
             padding-left: 1rem;
-            top:0;
+            top: 0;
             left: 0;
             opacity: 0;
             visibility: hidden;
             transition: opacity .2s ease-in, top .2s ease-in;
         }
 
-        &_message{
+        &_message {
             width: 100%;
             height: 20rem;
             font-family: sans-serif;
@@ -150,7 +179,7 @@
             resize: none;
         }
 
-        .buttons{
+        .buttons {
             display: flex;
             justify-content: space-between;
         }
@@ -168,5 +197,9 @@
 
     .form_container {
         height: 100%;
+    }
+    .btn-contact{
+        animation: fadeIn .5s backwards;
+        animation-delay: .9s;
     }
 }

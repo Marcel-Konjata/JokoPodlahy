@@ -1,9 +1,11 @@
 .about{
-   height: 100vh;
-   min-height: 65rem;
+   height: 95rem;
+   min-height: 100vh;
    overflow: hidden;
    position: relative;
-   
+   @include setMediaQuery(max,760px){
+    height: 900px;
+}
    
     &_image{
         background: black;
@@ -12,18 +14,26 @@
        background: url('../../images/background/aboutimage.jpg') no-repeat;
        background-position: 8% 50%;
        min-height: 495px;
+       opacity: 1;
+       @include setMediaQuery(max,760px){
+        flex-basis: 75%;
+    }
+       
       
     }
     &_content{
         flex-basis: 55%;
         background-color:black;
         color:white;
-        height: 100vh;
-        min-height: 495px;
+        min-height: 100vh; ///tady je bug !!!!!!!!! ** edit bug opraven
+        height: 95rem;
         position: relative;
         border-left: 1px solid white;
-    
-        
+        flex-shrink: 0;
+        @include setMediaQuery(max,760px){
+            flex-basis: 25%;
+            height: 900px;
+        }
         &-article{
             font-size: 1.8rem;
            max-width: 55rem;
@@ -32,6 +42,18 @@
             min-height: 35rem;
             border: solid white 1px;
            position: relative;
+           @include setMediaQuery(max,760px){
+            position: absolute;
+            width:350px;
+            top: 20%;
+            right: 65%;
+            background: black;
+        }
+            
+           //animation property for main box
+           animation: fadeFromRight 1s backwards;
+           animation-delay: .5s;
+
             p:not(:last-of-type){
                 margin-bottom: 1rem;
             }
@@ -44,7 +66,7 @@
 
             }
                     &--complementary{
-                        max-width: 380px;
+                        max-width: 38rem;
                         height:35rem;
                         
                         
@@ -52,8 +74,31 @@
                         color: black;
                         padding: 4rem 5rem;
                         position: absolute;
-                        top: 55%;
+                        top: 65%;
                         left: -36rem;
+
+                        //responsive element change!!!!!!!!!!
+                        @include setMediaQuery(max,1294px){
+                           left: -36rem;
+                           
+                           
+                        }
+                        @include setMediaQuery(max,760px){
+                            left:-60rem;
+                            top:52rem;
+                        }
+                        @include setMediaQuery(max,567px){
+                            left:-40rem;
+                            top:58rem;
+                        }
+
+
+                        ///////////////////////////////////////
+
+                        //animation property will be added here
+                        animation: fadeInFromTop 1.2s backwards;
+                        animation-delay: .3s;
+                    
 
                         h2{
                             margin-top: 2rem;
@@ -70,8 +115,7 @@
     }
 }
 .articles{
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
+    position: relative;
+    margin-top: 20rem;
+    margin-left: 8rem;
 }

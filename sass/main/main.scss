@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import '../components/mixins'; //important mixins has to be about every style import to be red correctly
 @import '../layout/grid';
+@import '../layout/galerie';
 @import '../components/buttons';
 @import '../components/navigations';
+@import '../components/keyframes';
 @import '../sections/hero';
 @import '../sections/about';
 @import '../sections/offer';
@@ -20,12 +23,16 @@
 //set basic rem to 10px by adjusting percentage of default font size / uprava rem jednotky aby 1 rem = 10 px
 html{
     font-size: 62.5%;
-    
+    @include setMediaQuery(max, 1294px){
+        font-size: 50%;
+    }
+  
 }
 //soft reset of body text to compensate lowering rem / vykompenzovani upravy jednotek rem + font change
 body{
     font-size: 1.6rem;
     font-family: 'Roboto Slab', 'Segoe UI', serif;
+    
     
 }
 
@@ -40,3 +47,4 @@ ul,ol{
 h1,h2,h3{
     font-family: 'Montserrat';
 }
+

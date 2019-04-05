@@ -1,0 +1,18 @@
+/*-----IMPORTANT NOTE------ due to using mixins of setting media query
+the explicit way is set, this will keep code more readable than mobile-laptop-bigscreen
+first argument is set to determine breakpoint min or max
+second argument is width value
+*/
+
+@mixin setMediaQuery($minOrMax,$width) {
+    @if $minOrMax =='max' {
+        @media screen and (max-width:$width) {
+            @content;
+        }   
+    }
+    @else if $minOrMax =='min'{
+        @media screen and (min-width:$width) {
+            @content;
+        }   
+    }
+}

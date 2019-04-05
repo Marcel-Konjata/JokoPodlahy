@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACAA;;;;EAIE;AASM,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EDZ3C,AAAA,IAAI,CAAA;IAGI,UAAU,EAAE,IAAI;GAEvB",
     "sources": [
-        "../sass/mobile/mobile.scss"
+        "../sass/mobile/mobile.scss",
+        "../sass/components/_mixins.scss"
     ],
     "names": [],
     "file": "mobile.css"

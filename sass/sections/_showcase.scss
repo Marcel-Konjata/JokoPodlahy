@@ -2,9 +2,47 @@
     height: 100vh;
     background-color: black;
     position: relative;
+    flex-shrink: 0;
+    min-height: 82rem;
+    overflow: hidden;
+
+    @include setMediaQuery(max, 950px) {
+        min-height: 820px;
+    }
+    @include setMediaQuery(max, 643px) {
+        min-height: 982px;
+    }
+
+    .wrapper-colored {
+        @include setMediaQuery(max, 950px) {
+
+           min-height: 820px;
+        }
+        
+    }
+
+    .wrapper { 
+       
+        margin-top: 3rem;
+        
+        height: 80rem;
+        overflow: hidden;
+
+        @include setMediaQuery(max, 950px) {
+            flex-direction: column;
+            height: 850px;
+        }
+        @include setMediaQuery(max, 643px) {
+            min-height: 982px;
+            
+        }
+
+    }
 
     .cards_wrapper {
         width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
 
     }
 
@@ -13,6 +51,20 @@
         position: relative;
         z-index: 2;
         margin-left: 5%;
+        
+        
+
+        @include setMediaQuery(max, 950px) {
+            margin: auto;
+        }
+        @include setMediaQuery(max, 650px) {
+            margin: auto;
+            width: 100%;
+        }
+
+        //animation property will be added here
+        animation: fadeFromLeft .8s backwards;
+
     }
 
     &_cards {
@@ -20,9 +72,19 @@
         height: 18rem;
         overflow: hidden;
         background: white;
+        
 
         &:nth-of-type(2) {
             transform: scale(1.15);
+
+            @include setMediaQuery(max, 643px){
+                transform: scale(1);
+            }
+            @include setMediaQuery(max, 643px){
+                width: 50rem;
+                height: 32rem;
+                order: 1;
+            }
         }
 
 
@@ -44,20 +106,28 @@
         margin-top: 2rem;
     }
 
-    .wrapper {
-        height: 90%;
-
-
-    }
+    
 
     &_content {
         color: white;
 
-        font-size: 2rem;
+        font-size: 1.8rem;
         width: 35%;
         padding: 6rem 8rem;
-        border: solid white 2px;
-        border-radius: 40px;
+        border: solid white 1px;
+        border-radius: 15px;
+
+        @include setMediaQuery(max, 950px) {
+            width: 80%;
+            order: -1;
+            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-top:auto; 
+        }
+
+        //animate property will be added here 
+        animation: fadeFromRight .8s backwards;
+
 
         &-heading {
             margin-bottom: 6rem;
@@ -72,21 +142,30 @@
         }
     }
 
-    &_animate-btn{
-        margin:2rem 6rem;
+    &_animate-btn {
+        margin: 2rem 6rem;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
         }
-        &:active{
+
+        &:active {
             transform: scale(1);
         }
     }
-    .input_container {justify-content: center;}
+
+    .input_container {
+        justify-content: center;
+
+        @include setMediaQuery(max,643px){
+            display: none;
+        }
+    }
 
 
     input[type="checkbox"] {
-        display: none;
+        visibility: hidden;
     }
 
 }

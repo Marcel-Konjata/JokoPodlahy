@@ -2,9 +2,14 @@
     max-width: 80rem;
     height: 6rem;
    padding-top: 2rem;
+
+   @include setMediaQuery(max,900px){
+    display: none;
+}
     &-list{
         justify-content: flex-start;
         padding-left: 6rem;
+        
         
     }
     &-link{
@@ -13,11 +18,17 @@
         font-weight: 600;
         padding: 2rem;
         display: inline-block;
+        
+    }
+    & .active-link {
+        background: red;
     }
 
 }
 .navigation_vertical{
-    
+    @include setMediaQuery(max,1039px){
+        display: none;
+    }
     
     /*values here are in vh because after rotating element we are reversing directions widht is heigth and height will 
     be projected as width therefore VH unit is needed here 

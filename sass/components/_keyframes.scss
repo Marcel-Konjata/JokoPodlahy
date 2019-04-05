@@ -1,0 +1,82 @@
+@keyframes fadeFromRight {
+    0% {
+        opacity: 0;
+        transform: translate(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+@keyframes fadeFromLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromTop {
+    from {
+        transform: translate(0%, -80%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+@keyframes fadeInFromBot {
+    from {
+        transform: translate(0%, 80%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+//this is neseccary animation for skewed card section, animation property overwrites default trasnitions,
+// thus skew needs to be added into it as well
+@keyframes fadeInFromBot-skewCard {
+    0% {
+        transform: skewy(15deg);
+        
+        opacity: 0;
+    }
+    
+
+
+    100%{
+        transform: skewY(15deg);
+        
+        opacity: 1;
+    }
+}
+
+@keyframes scaleAnimation {
+    0%{
+        transform:scale(0) ;
+    }
+    100%{
+        transform:scale(1) ;
+    }
+}

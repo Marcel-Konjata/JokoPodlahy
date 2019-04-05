@@ -1,0 +1,7 @@
+@import '../components/mixins';
+body{
+    @include setMediaQuery(min,350px)
+    {
+        background: blue;
+    }
+}
