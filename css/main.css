@@ -190,6 +190,10 @@ second argument is width value
   background: white;
 }
 
+.btn-contact-mobile {
+  display: none;
+}
+
 .btn-cancel {
   color: white;
   background: black;
@@ -235,16 +239,50 @@ second argument is width value
   padding-left: 6rem;
 }
 
+.navigation_horizontal-list-item {
+  border-radius: 0 0 28px 0;
+  overflow: hidden;
+  height: 4.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.navigation_horizontal-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb7820;
+  z-index: -1;
+  -webkit-transform: scalex(0);
+          transform: scalex(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform .5s .2s ease;
+  transition: -webkit-transform .5s .2s ease;
+  transition: transform .5s .2s ease;
+  transition: transform .5s .2s ease, -webkit-transform .5s .2s ease;
+}
+
+.navigation_horizontal-list-item:hover::before {
+  -webkit-transform: scalex(1);
+          transform: scalex(1);
+}
+
 .navigation_horizontal-link {
   color: white;
   font-family: 'Montserrat';
   font-weight: 600;
-  padding: 2rem;
+  padding: 1.2rem 2rem;
   display: inline-block;
+  border-radius: 0 0 30px 0;
+  overflow: hidden;
 }
 
 .navigation_horizontal .active-link {
-  background: red;
+  background: #b87723;
 }
 
 .navigation_vertical {
@@ -285,12 +323,53 @@ second argument is width value
       justify-content: space-around;
 }
 
+.navigation_vertical-list-item {
+  position: relative;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.navigation_vertical-list-item .active-link {
+  background: black;
+  color: white;
+}
+
+.navigation_vertical-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s .2s ease;
+  transition: -webkit-transform 0.3s .2s ease;
+  transition: transform 0.3s .2s ease;
+  transition: transform 0.3s .2s ease, -webkit-transform 0.3s .2s ease;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.navigation_vertical-list-item:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 .navigation_vertical-link {
   display: inline-block;
   padding: .5rem 1rem;
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
+  -webkit-transition: color .2s .2s ease;
+  transition: color .2s .2s ease;
+}
+
+.navigation_vertical-link:hover {
+  color: white;
 }
 
 .main-header {
@@ -574,7 +653,32 @@ second argument is width value
 }
 
 .hero_navigation-list-item {
-  display: block;
+  position: relative;
+  padding: .5rem;
+  z-index: 1;
+}
+
+.hero_navigation-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  z-index: -1;
+}
+
+.hero_navigation .hero_navigation-list-item:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .hero_navigation-list-item:not(:first-of-type) {
@@ -584,10 +688,6 @@ second argument is width value
 .hero_navigation-link {
   color: white;
   padding-bottom: 1.5rem;
-}
-
-.hero_navigation-link:hover {
-  border-bottom: 1px solid;
 }
 
 .btn_hero {
@@ -1444,6 +1544,71 @@ second argument is width value
           animation: fadeIn .5s backwards;
   -webkit-animation-delay: .9s;
           animation-delay: .9s;
+}
+
+.page-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  background-color: #e4e2e2;
+}
+
+.page-footer .footer_left {
+  margin-right: auto;
+  margin-left: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (max-width: 756px) {
+  .page-footer .footer_left {
+    width: 30%;
+    text-align: center;
+  }
+}
+
+.page-footer .footer_mid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 756px) {
+  .page-footer .footer_mid {
+    width: 35%;
+    text-align: center;
+  }
+}
+
+.page-footer .footer_right {
+  margin-right: 20px;
+  margin-left: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-footer .footer_right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+.page-footer .footer_right a .icon {
+  margin-right: 5px;
 }
 
 *,

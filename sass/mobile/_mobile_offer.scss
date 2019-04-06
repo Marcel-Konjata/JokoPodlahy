@@ -1,0 +1,84 @@
+.offer{
+    min-height: 568px;
+    min-width: 317px;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height:160px;
+        background: url('../../svg/Path\ 7.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        bottom: 0px;
+        left: 0;
+        @include setMediaQuery(min,380px){
+            background-size: 380px;
+            background-position: left;
+        }
+       
+    }
+    &::after{
+        content: '';
+        width: 100px;
+        height: 150px;
+        background: white;
+        position: absolute;
+        right: -70px;
+        top:250px;
+        border-radius: 50%;   
+    }
+    &_presentation{
+        display: none;
+    }
+    &_content{
+        margin-top: 5rem;
+        padding: 0 1rem;
+        h2{
+            text-align: center;
+        }
+        
+    }
+    &_lists{
+        display: flex;
+        height: 250px;
+        width: 100%;
+        padding-top: 2rem;
+        justify-content: center;
+        h3{border-bottom: 1px solid #666;}
+
+        &-left{
+            border-right: 1px solid #666;
+            padding: 2rem 1rem 2rem 0;
+            text-align: right;
+            li{
+                margin: 10px 0;
+            }
+            
+        }
+        &-right{
+            padding-left: 1rem;
+            text-align: center;
+                li{margin:10px 0; }
+            &--secondary{
+                color: black;
+                position: absolute;
+                bottom: 55px;
+                left: 30px;
+                li{
+                    display: inline-block;
+                    margin:0 10px;
+                }
+            }
+        }
+        .mobile-changing{
+            position: absolute;
+            bottom: 80px;
+            left:80px;
+            color: black;
+        }
+        
+    }
+}

@@ -1,0 +1,35 @@
+.hero{
+    height: 100vh;
+    min-height: 568px;
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 10%, rgba(100, 40, 23, 0.568), rgba(129, 3, 3, 0.445), rgba(0, 0, 0, 0.924))
+    ,url('../../images/hero-img/heroimg_mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% center;
+    position: relative;
+
+    &_title{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        
+        
+        
+        &--primary{
+            font-weight: 400;
+            text-shadow: 2px 2px  rgba(0, 0, 0, 0.746);
+            font-size: 1.2rem;
+        }
+        &--secondary{
+            
+            display: block;
+            font-size: .8rem;
+            margin-top: 10px;
+        }
+    }
+}
+.btn_hero{
+    margin-top: 150px;
+}
+.hero_navigation{display: none}

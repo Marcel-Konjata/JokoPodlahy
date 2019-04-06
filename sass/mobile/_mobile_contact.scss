@@ -1,0 +1,53 @@
+.contact {
+    text-align: center;
+    &_card {
+        padding: 1rem 2rem;
+        border: solid 1px white;
+        width: 70%;
+        margin: 20px auto;
+       
+        
+    }
+
+    &_card-info {
+        margin-bottom: 20px;
+        
+
+        .phonenumber {
+            display: inline-block;
+        }
+
+        .mail {
+            display: block;
+        }
+    }
+    &_card-image{
+        width:30%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .popup{
+        display: none;
+    }
+    .btn-contact{
+        display: none;
+    }
+    .btn-contact-mobile{
+        
+        background: white;
+        margin: 20px;
+        padding: 10px;
+        display: flex;
+        width: 45%;
+        align-items: center;
+        margin: 25px auto;
+        
+        .icon{
+            height: 30px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+    
+}

@@ -1,0 +1,47 @@
+.showcase{
+    .input_container{
+        display: none;
+    }
+    .cards_wrapper{
+        width: 100%;
+        max-height:450px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .showcase_cards{
+        width:50%;
+        padding: 10px;
+        color: black;
+        background: white;
+        border: 1px solid black;
+        text-align: center;
+        &:nth-of-type(2){
+            order: 1;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
+    .showcase_content{
+        order:-1;
+        height: 300px;
+        padding: 20px;
+        &-heading{
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+        &-paragraph{
+            margin-bottom: 1.2rem;
+        }
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-galerie{
+        padding: 8px 15px;
+        margin-top: 1.2rem;
+    }
+}
