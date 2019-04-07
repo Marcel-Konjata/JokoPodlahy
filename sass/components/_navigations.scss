@@ -3,7 +3,7 @@
     height: 6rem;
    padding-top: 2rem;
 
-   @include setMediaQuery(max,900px){
+   @include setMediaQuery(max,912px){
     display: none;
 }
     &-list{
@@ -77,6 +77,9 @@
     
    
     width: 75vh;
+    @media screen and (max-height:386px) {
+        display: none;
+    }
     &-list{
         display: flex;
         align-items: center;
@@ -145,7 +148,7 @@
 }
 
 .mobile_navbar{
-    @include setMediaQuery(min,901px){
+    @include setMediaQuery(min,912px){
         display: none;
     }
     position: fixed;
