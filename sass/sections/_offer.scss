@@ -8,9 +8,16 @@
     @include setMediaQuery(max, 953px){
         height:1050px;
     }
+    @include setMediaQuery(max,650px){
+        height:827px;
+    }
    
+    &.hidden .offer_wrapper{
+        display: none;
+    }
 
     &_wrapper {
+        
         align-items: center;
         justify-content: center;
         min-height: 600px;
@@ -27,7 +34,7 @@
         }
         
         @include setMediaQuery(max,760px){
-            height:959px;
+            height:750px;
         }
     }
 

@@ -10,10 +10,13 @@
     min-height: 80rem;
     overflow: hidden;
 
-    // min-height: 700px;
+    &.hidden .contact_mainbox{
+        display: none;
+    }
     &_mainbox {
         height: 92%;
-        // background-color: #fff;
+        
+        
     }
 
     &_card-wrapper {
@@ -52,7 +55,7 @@
 
             //animation property will be added here
             animation: fadeInFromTop .8s backwards;
-            animation-delay: .3s;
+            animation-delay: .5s;
             ///////////////////////////////////////////
 
             .contact_card-info {
@@ -67,7 +70,7 @@
 
             //animation property will be added here
             animation: fadeInFromBot .8s backwards;
-            animation-delay: .3s;
+            animation-delay: .5s;
             ///////////////////////////////////////////
 
         }
@@ -200,6 +203,6 @@
     }
     .btn-contact{
         animation: fadeIn .5s backwards;
-        animation-delay: .9s;
+        animation-delay: 1.2s;
     }
 }

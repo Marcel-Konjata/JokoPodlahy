@@ -1,10 +1,13 @@
 .contact {
     text-align: center;
+    overflow: hidden;
+    margin-top: 100px;
     &_card {
         padding: 1rem 2rem;
         border: solid 1px white;
         width: 70%;
         margin: 20px auto;
+        max-width: 320px;
        
         
     }

@@ -1,120 +1,135 @@
-.about{
-   height: 95rem;
-   min-height: 100vh;
-   overflow: hidden;
-   position: relative;
-   @include setMediaQuery(max,760px){
-    height: 900px;
-}
-   
-    &_image{
+.about {
+    height: 95rem;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    @include setMediaQuery(max, 760px) {
+        height: 900px;
+    }
+
+    &_image {
         background: black;
         flex-basis: 45%;
         overflow: hidden;
-       background: url('../../images/background/aboutimage.jpg') no-repeat;
-       background-position: 8% 50%;
-       min-height: 495px;
-       opacity: 1;
-       @include setMediaQuery(max,760px){
-        flex-basis: 75%;
+        background: url('../../images/background/aboutimage.jpg') no-repeat;
+        background-position: 8% 50%;
+        min-height: 495px;
+        opacity: 1;
+
+        @include setMediaQuery(max, 760px) {
+            flex-basis: 75%;
+        }
+
     }
-       
-      
+    &.hidden .articles {
+        display: none;
     }
-    &_content{
+
+    &_content {
         flex-basis: 55%;
-        background-color:black;
-        color:white;
-        min-height: 100vh; ///tady je bug !!!!!!!!! ** edit bug opraven
-        height: 95rem;
+        background-color: black;
+        color: white;
+        min-height: 95rem; ///tady je bug !!!!!!!!! ** edit bug opraven
+        height: 100vh;
         position: relative;
         border-left: 1px solid white;
         flex-shrink: 0;
-        @include setMediaQuery(max,760px){
+
+        @include setMediaQuery(max, 760px) {
             flex-basis: 25%;
             height: 900px;
         }
-        &-article{
+
+        &-article {
             font-size: 1.8rem;
-           max-width: 55rem;
-           line-height: 1.5;
-           padding: 2rem 4rem;
+            max-width: 55rem;
+            line-height: 1.5;
+            padding: 2rem 4rem;
             min-height: 35rem;
             border: solid white 1px;
-           position: relative;
-           @include setMediaQuery(max,760px){
-            position: absolute;
-            width:350px;
-            top: 20%;
-            right: 65%;
-            background: black;
-        }
-            
-           //animation property for main box
-           animation: fadeFromRight 1s backwards;
-           animation-delay: .5s;
+            position: relative;
 
-            p:not(:last-of-type){
+            @include setMediaQuery(max, 760px) {
+                position: absolute;
+                width: 350px;
+                top: 20%;
+                right: 65%;
+                background: black;
+            }
+
+            //animation property for main box
+            animation: fadeFromRight 1s backwards;
+            animation-delay: .5s;
+
+            p:not(:last-of-type) {
                 margin-bottom: 1rem;
             }
-            p:last-of-type{
+
+            p:last-of-type {
                 margin-bottom: 2rem;
             }
-            h2{
+
+            h2 {
                 margin-top: 2rem;
                 margin-bottom: 1.5rem;
 
             }
-                    &--complementary{
-                        max-width: 38rem;
-                        height:35rem;
-                        
-                        
-                        background: linear-gradient(35deg, black 20%, white 20%, white);
-                        color: black;
-                        padding: 4rem 5rem;
-                        position: absolute;
-                        top: 65%;
-                        left: -36rem;
 
-                        //responsive element change!!!!!!!!!!
-                        @include setMediaQuery(max,1294px){
-                           left: -36rem;
-                           
-                           
-                        }
-                        @include setMediaQuery(max,760px){
-                            left:-60rem;
-                            top:52rem;
-                        }
-                        @include setMediaQuery(max,567px){
-                            left:-40rem;
-                            top:58rem;
-                        }
+            &--complementary {
+                max-width: 38rem;
+                height: 35rem;
 
 
-                        ///////////////////////////////////////
+                background: linear-gradient(35deg, black 20%, white 20%, white);
+                color: black;
+                padding: 4rem 5rem;
+                position: absolute;
+                top: 65%;
+                left: -36rem;
 
-                        //animation property will be added here
-                        animation: fadeInFromTop 1.2s backwards;
-                        animation-delay: .3s;
-                    
+                //responsive element change!!!!!!!!!!
+                @include setMediaQuery(max, 1294px) {
+                    left: -36rem;
 
-                        h2{
-                            margin-top: 2rem;
-                            font-size: 1.6rem;
-                            font-weight: 600;
-                            margin-bottom: 3rem;
-                        }
-                        p{
-                            margin: 2rem 0;
-                            font-size: 1.5rem;
-                        }
-                  }
+
+                }
+
+                @include setMediaQuery(max, 760px) {
+                    left: -60rem;
+                    top: 52rem;
+                }
+
+                @include setMediaQuery(max, 567px) {
+                    left: -40rem;
+                    top: 58rem;
+                }
+
+
+                ///////////////////////////////////////
+
+                //animation property will be added here
+                animation: fadeInFromTop 1.2s backwards;
+                animation-delay: .3s;
+
+
+                h2 {
+                    margin-top: 2rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin-bottom: 3rem;
+                }
+
+                p {
+                    margin: 2rem 0;
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }
-.articles{
+
+.articles {
     position: relative;
     margin-top: 20rem;
     margin-left: 8rem;

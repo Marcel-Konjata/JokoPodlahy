@@ -11,6 +11,9 @@
     position: relative;
   
     .wrapper{height: 100%;}
+    &.hidden{
+        .hero_title{display: none;}
+    }
 
     &_title {
         color: white;

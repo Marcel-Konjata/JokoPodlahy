@@ -16,8 +16,15 @@
     }
     &-galerie{
         background: white;
-        border-radius: 8px;
-        color: black
+        border-radius: 5px;
+        padding: .8rem 2rem;
+        color: black;
+        border:1px solid black;
+        &:hover{
+            color: white;
+            background: black;
+            border: 1px solid white;
+        }
         
     }
     &-contact{

@@ -80,3 +80,26 @@
         transform:scale(1) ;
     }
 }
+
+@keyframes leftCard{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    20%{
+        transform: translate(-20%,0%);
+    }
+    100%{
+        transform: translate(30%,0%) scale(1.4);
+    }
+}
+@keyframes rightCard{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    20%{
+        transform: translate(20%,0%);
+    }
+    100%{
+        transform: translate(-30%,0%) scale(1.4);
+    }
+}

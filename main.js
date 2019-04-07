@@ -1,20 +1,58 @@
+$('#left_showcase').change(function(){
+    if($(this).is(":checked")) {
+        $('.showcase_cards').addClass("left-animate");
+    } else {
+        $('.showcase_cards').removeClass("left-animate");
+    }
+});
+$('#right_showcase').change(function(){
+    if($(this).is(":checked")) {
+        $('.showcase_cards').addClass("right-animate");
+    } else {
+        $('.showcase_cards').removeClass("right-animate");
+    }
+});
 
-var markHeight = 2;
-var JoanHeight = 1.6;
+$.scrollify({
+    section : ".example-classname",
+    sectionName : "section-name",
+    interstitialSection : "",
+    easing: "easeOutExpo",
+    scrollSpeed: 1100,
+    offset : 0,
+    scrollbars: true,
+    standardScrollElements: ".contact",
+    setHeights: false,
+    overflowScroll: true,
+    updateHash: true,
+    touchScroll:true,
+    before:function() {},
+    after:function() {},
+    afterResize:function() {},
+    afterRender:function() {}
+  });
 
-var markWeight = 55;
-var JoanWeight = 52;
+  $(function() {
+    $.scrollify({
+      section : ".panel",
+      before: function(section){
+          if(section===1){
+              $(".about").removeClass("hidden");
+          }
+          if(section===2){
+              $(".offer").removeClass("hidden");
+          }
+          if(section===3){
+              $(".showcase").removeClass("hidden");
+          }
+          if(section===4){
+              $(".contact").removeClass("hidden");
+          }
+    }
+    });
+  });
 
-function calculateBMI(height, weight){
-    let bmi = weight/(height*height);
-    return bmi;
-}
-if(calculateBMI(markHeight,markWeight) > calculateBMI(JoanHeight,JoanWeight)){
-    console.log("mark has higher bmi");
-}
-else if(calculateBMI(markHeight,markWeight) < calculateBMI(JoanHeight,JoanWeight)){
-    console.log("Joan has higher bmi");
-}
-else {
-    console.log("both has same bmi");
-}
+  $('.scroll-to').click(function(){
+    var moveTo = $(this).attr('href');
+    $.scrollify.move(moveTo);
+  });
